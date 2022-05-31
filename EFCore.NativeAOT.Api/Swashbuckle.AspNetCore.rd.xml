@@ -1,0 +1,28 @@
+<Directives>
+    <Application>
+		<Assembly Name="System.Text.Json" Dynamic="Required All">
+			<Type Name="System.Text.Json.Serialization.Converters.EnumConverter`1[[Swashbuckle.AspNetCore.SwaggerUI.ModelRendering,Swashbuckle.AspNetCore.SwaggerUI]]" Dynamic="Required All" />
+			<Type Name="System.Text.Json.Serialization.Converters.EnumConverter`1[[Swashbuckle.AspNetCore.SwaggerUI.DocExpansion,Swashbuckle.AspNetCore.SwaggerUI]]" Dynamic="Required All" />
+			<Type Name="System.Text.Json.Serialization.Converters.EnumConverter`1[[Swashbuckle.AspNetCore.SwaggerUI.SubmitMethod,Swashbuckle.AspNetCore.SwaggerUI]]" Dynamic="Required All" />
+			<Type Name="System.Text.Json.Serialization.Converters.NullableConverter`1[[System.Int32,System.Runtime]]" Dynamic="Required All" />
+			<Type Name="System.Text.Json.Serialization.Converters.IEnumerableOfTConverter`2[[System.Collections.Generic.IEnumerable`1[[Swashbuckle.AspNetCore.SwaggerUI.SubmitMethod,Swashbuckle.AspNetCore.SwaggerUI]],System.Runtime],[Swashbuckle.AspNetCore.SwaggerUI.SubmitMethod, Swashbuckle.AspNetCore.SwaggerUI]]" Dynamic="Required All" />
+			<Type Name="System.Text.Json.Serialization.Converters.ListOfTConverter`2[[System.Collections.Generic.List`1[[Swashbuckle.AspNetCore.SwaggerUI.SubmitMethod,Swashbuckle.AspNetCore.SwaggerUI]],System.Collections],[Swashbuckle.AspNetCore.SwaggerUI.SubmitMethod, Swashbuckle.AspNetCore.SwaggerUI]]" Dynamic="Required All" />
+			<Type Name="System.Text.Json.JsonSerializerOptions">
+				<Method Name="CreateReflectionJsonTypeInfo" Dynamic="Required">
+					<GenericArgument Name="Swashbuckle.AspNetCore.SwaggerUI.SubmitMethod,Swashbuckle.AspNetCore.SwaggerUI" />
+				</Method>				
+			</Type>
+		</Assembly>
+		<Assembly Name="Swashbuckle.AspNetCore.Swagger" Dynamic="Required All">
+		</Assembly>
+		<Assembly Name="Swashbuckle.AspNetCore.SwaggerUI" Dynamic="Required All">
+			<Type Name="Swashbuckle.AspNetCore.SwaggerUI.ModelRendering" Dynamic="Required All" />
+			<Type Name="Swashbuckle.AspNetCore.SwaggerUI.DocExpansion" Dynamic="Required All" />
+			<Type Name="Swashbuckle.AspNetCore.SwaggerUI.ModelRendering[]" Dynamic="Required All" />
+			<Type Name="Swashbuckle.AspNetCore.SwaggerUI.DocExpansion[]" Dynamic="Required All" />
+			<Type Name="Swashbuckle.AspNetCore.SwaggerUI.SubmitMethod" Dynamic="Required All" />
+		</Assembly>
+		<Assembly Name="Swashbuckle.AspNetCore.SwaggerGen" Dynamic="Required All">
+		</Assembly>
+    </Application>
+</Directives>

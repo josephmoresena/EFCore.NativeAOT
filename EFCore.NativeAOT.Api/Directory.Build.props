@@ -1,0 +1,14 @@
+<Project>
+  <PropertyGroup>
+    <IlcOptimizationPreference>Speed</IlcOptimizationPreference>
+    <IlcFoldIdenticalMethodBodies>true</IlcFoldIdenticalMethodBodies>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.DotNet.ILCompiler" Version="7.0.0-*" />
+    <RdXmlFile Include="rd.xml" />
+    <RdXmlFile Include="Swashbuckle.AspNetCore.rd.xml" />
+    <RdXmlFile Include="../EFCore.NativeAOT.Data/Microsoft.EntityFrameworkCore.rd.xml" />
+    <RdXmlFile Condition="'false' == 'true'" Include="../EFCore.NativeAOT.Data.Sqlite/Microsoft.EntityFrameworkCore.Sqlite.rd.xml" />
+    <RdXmlFile Condition="'false' == 'true'" Include="../EFCore.NativeAOT.Data.PostgreSql/Npgsql.EntityFrameworkCore.PostgreSQL.rd.xml" />
+  </ItemGroup>
+</Project>

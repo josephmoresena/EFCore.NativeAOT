@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	<RootNamespace>$(MSBuildProjectName.Replace(" ", "_").Replace(".Api", ""))</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.5">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EFCore.NativeAOT.Data.MySql\EFCore.NativeAOT.Data.MySql.csproj" />
+    <ProjectReference Include="..\EFCore.NativeAOT.Data.PostgreSql\EFCore.NativeAOT.Data.PostgreSql.csproj" />
+    <ProjectReference Include="..\EFCore.NativeAOT.Data.SqlServer\EFCore.NativeAOT.Data.SqlServer.csproj" />
+    <ProjectReference Include="..\EFCore.NativeAOT.Data\EFCore.NativeAOT.Data.csproj" />
+    <ProjectReference Include="..\EFCore.NativeAOT.Data.Sqlite\EFCore.NativeAOT.Data.Sqlite.csproj" />
+  </ItemGroup>
+
+</Project>
